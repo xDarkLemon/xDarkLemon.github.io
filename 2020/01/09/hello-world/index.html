@@ -244,6 +244,10 @@ crossorigin="anonymous"></script>
     <ul>
             <li><i class='fa fa-calendar'></i> 2020-01-09</li>
             
+            <li class='comment-button'><a href='#article-comment'><i class='fa fa-comments'></i> <span id='article-comment-count'>0</span></a></li>
+            <li><i class="fa fa-eye"></i> <span id='article-visit-count'>0</span></li>
+            <li class='thumb-up-button' id='thumb-up-button'><i class="far fa-thumbs-up fa-lg" id='thumb-up-icon'></i> <span id='article-thumbup-count'>0</span></li>
+            
             <li><i class="fa fa-user"></i> Yibo Liu</li>
             <li><i class="fas fa-copyright"></i>
             
@@ -364,10 +368,7 @@ Run server1$ hexo...</p>
 <h1>Comment</h1>
 
   
-    <div id="comment-not-available">
-      Not available
-      <p><strong>For site maintainer: Please provide <code>appId</code> and <code>appKey</code> in your <code>_data/cutie.yml</code> file for <code>valine</code> comment system.</strong></p>
-    </div>
+    <div id='valine'></div>
   
 
 
@@ -455,6 +456,23 @@ Run server1$ hexo...</p>
 
 
     
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz',
+        appKey: 'vjbC9f3Q6bm7tpA59sHStSjh',
+        placeholder: '',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
 
 
 
@@ -498,6 +516,68 @@ Run server1$ hexo...</p>
 </script>
 
 
+    
+<script type='text/javascript'>
+  
+  // update cookie if this page is opened (directly)
+  function getIP(json) {
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+  loadjs.ready('post-visit-comment-count', function(){
+    
+    
+    LeanCloud.init('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
+    var leanCloud = LeanCloud.getInstance();
+    leanCloud.fetchIsThumbUp('/2020/01/09/hello-world/', json.ip);
+    document.getElementById('thumb-up-button').addEventListener('click', function(e){
+      leanCloud.isThumbUp('/2020/01/09/hello-world/', function(isThumbUp){
+        console.log('is thumb up:' + isThumbUp);
+        if(isThumbUp){
+          leanCloud.removeThumbUpRecord('/2020/01/09/hello-world/', json.ip);
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+          
+        }else{
+          leanCloud.addThumbUpRecord('/2020/01/09/hello-world/', json.ip);
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }
+        leanCloud.getThumbUpCount('/2020/01/09/hello-world/', function(count){
+            console.log('thumb up count: ' + count)
+            var el = document.getElementById('article-thumbup-count');
+            if(el) el.innerHTML = count;
+        });
+      });
+    });
+    leanCloud.addVisitRecord('/2020/01/09/hello-world/', json.ip);
+    leanCloud.fetchCommentCount('/2020/01/09/hello-world/');
+    leanCloud.fetchVisitCount('/2020/01/09/hello-world/');
+    leanCloud.fetchThumbUpCount('/2020/01/09/hello-world/');
+    leanCloud.getCommentCount('/2020/01/09/hello-world/', function(count){
+        var el = document.querySelector('#article-comment-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getVisitCount('/2020/01/09/hello-world/', function(count){
+        var el = document.querySelector('#article-visit-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.getThumbUpCount('/2020/01/09/hello-world/', function(count){
+        var el = document.getElementById('article-thumbup-count');
+        if(el) el.innerHTML = count;
+    });
+    leanCloud.isThumbUp('/2020/01/09/hello-world/', function(isThumbUp){
+        console.log('init thumb up:' + isThumbUp);
+        if(isThumbUp){
+          document.getElementById('thumb-up-icon').className = "fas fa-thumbs-up fa-lg";
+        }else{
+          document.getElementById('thumb-up-icon').className = "far fa-thumbs-up fa-lg";
+        }
+    });
+  });
+  }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
 
 <!-- 
 <script src="/js/post.js"></script>
@@ -514,7 +594,7 @@ initHeadroom();
 changeLayoutOnTouchScreen();
 
 // 
-// var post = new Post('', '');
+// var post = new Post('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
 // post.getCommentCount(window.location.pathname, function(count){
 //     $('#article-comment-count').text(count);
 // });
