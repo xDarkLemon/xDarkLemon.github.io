@@ -218,6 +218,46 @@ crossorigin="anonymous"></script>
 
 
 
+<div class='Card-archive' id='hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269' data-name='Natural-Language-Inference' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2020/01/23/Natural-Language-Inference/">
+			
+			Natural-Language-Inference</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2020-01-23
+						</a>
+					</li>
+					
+					
+					<li>
+						<a href="/2020/01/23/Natural-Language-Inference/#article-comment">
+							<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+						</a>
+					</li>
+					<li>
+						<i class="fa fa-eye"></i> <span class='card-visit-count'>0</span>
+					</li>
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
 <div class='Card-archive' id='hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7' data-name='Hello World' data-version=''>
 	<mark class='Card-badge'></mark>
 	<div class="Card-body">
@@ -411,6 +451,14 @@ crossorigin="anonymous"></script>
           
           
           
+            var postBadge = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
             var postBadge = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -431,6 +479,36 @@ crossorigin="anonymous"></script>
       success: function(){
           LeanCloud.init('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
           var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2020/01/23/Natural-Language-Inference/', json.ip);
+          leanCloud.fetchCommentCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.fetchVisitCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.fetchThumbUpCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.getCommentCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2020/01/23/Natural-Language-Inference/', function(isThumbUp){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
         
           
           

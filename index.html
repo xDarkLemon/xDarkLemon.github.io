@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Liu's Blog</title>
+  
+
+  
+  
+  <meta name="description" content="">
+  <meta name="author" content="Yibo Liu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  
+<script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+
+  <!-- load lightgallery -->
+
+<link rel="stylesheet" href="/css/lightgallery.css">
+
+
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    
+<link rel="stylesheet" href="/css/taurus.css">
+
+    
+        
+<link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+
+    
+
+
+
+<link rel="stylesheet" href="/.css">
+
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    
+<script src="/js/social-share.min.js"></script>
+
+    
+<script src="/js/theme.js"></script>
+
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/logo.svg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">Liu's Blog</a>
+			</h1>
+			<subtitle>
+				A simple notes
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+		
+		
+			<div class='nav-item'>
+				
+					<div class="nav-name">
+				
+					<a class='nav-link' href="https://sites.google.com/a/nyu.edu/yiboliu/" target="_blank" rel="noopener">
+						<span>About Me </span>
+					</a>
+				</div>
+			</div>
+		
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+			
+			
+		
+			<div class='nav-more-item'>
+					<div class="nav-name">
+						<a class='nav-link' href="https://sites.google.com/a/nyu.edu/yiboliu/" target="_blank" rel="noopener">
+							<span>About me</span>
+						</a>
+					</div>
+			</div>
+		
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      
+
+
+<div class="index-container" id='/index.html' data-name='index' data-version='2.1.4'>
+	<div class='index-intro'>
+		Bazinga, theme cutie!
+	</div>
+	
+		<div class="grid-2_md-1 grid-equalHeight index-cards">
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-1' id='hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269' data-name='Natural-Language-Inference' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2020/01/23/Natural-Language-Inference/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/c23066ea1ccab9a2674ac10e7b1a7bd7f633119f3b5c7e6de7cd761bf987de3c.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2020/01/23/Natural-Language-Inference/">
+				
+				Natural-Language-Inference</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2020/01/23/Natural-Language-Inference/">
+				
+				
+				
+				Some general ideasA criteria for machine comprehension
+“A machine comprehends a passage of text if, for any question regarding that text that can...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2020-01-23
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2020/01/23/Natural-Language-Inference/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-2' id='hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7' data-name='Hello World' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2020/01/09/hello-world/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2020/01/09/hello-world/">
+				
+				Hello World</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2020/01/09/hello-world/">
+				
+				
+				
+				Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2020-01-09
+							</a>
+						</li>
+						
+						
+						<li class='card-comment'>
+							<a href="/2020/01/09/hello-world/#article-comment">
+								<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
+							</a>
+						</li>
+						<li class='card-visitor'><i class="fa fa-eye"></i> <span class='card-visit-count'>0</span></li>
+						<li class='card-thumbup-container'><i class="far fa-thumbs-up"></i> <span class='card-thumbup-count'>0</span></li>
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+		</div>
+	
+	<br>
+	
+	<div class='pagination'>
+	
+	
+	
+	
+		
+		
+		<div class="pagination-item">
+			
+			
+				<span>1</span>
+			
+		</div>
+		
+		
+	
+	
+</div>
+</div>
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">Yibo Liu </a> @ 2020</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn" target="_blank" rel="noopener">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io" target="_blank" rel="noopener">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev" target="_blank" rel="noopener">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io" target="_blank" rel="noopener">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+            
+                
+                    <div class='footer-social-item'><a href='https://github.com/xDarkLemon' target='_blank' ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+				
+			
+		
+		
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+			
+			
+		
+			<div class='nav-more-item'>
+					<div class="nav-name">
+						<a class='nav-link' href="https://sites.google.com/a/nyu.edu/yiboliu/" target="_blank" rel="noopener">
+							<span>About me</span>
+						</a>
+					</div>
+			</div>
+		
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+    
+    
+    
+<script>
+    new Valine({
+        el: '#valine',
+        notify:false, 
+        verify:false,
+        appId: 'dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz',
+        appKey: 'vjbC9f3Q6bm7tpA59sHStSjh',
+        placeholder: 'Leave a comment :)',
+        path:window.location.pathname, 
+        avatar:'retro',
+        lang: 'en'
+    });
+</script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/lightgallery.min.js"></script>
+
+
+<script src="/js/lg-zoom.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+    loadjs.ready('post-version', {
+      success: function(){
+        console.log('ready to run badge script')
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+      }
+    })
+  
+</script>
+
+
+    
+<script type='text/javascript'>
+  
+    function getIP(json) {
+      loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/leancloud.js'], 'post-visit-comment-count');
+    loadjs.ready('post-visit-comment-count', {
+      success: function(){
+          LeanCloud.init('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
+          var leanCloud = LeanCloud.getInstance();
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2020/01/23/Natural-Language-Inference/', json.ip);
+          leanCloud.fetchCommentCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.fetchVisitCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.fetchThumbUpCount('/2020/01/23/Natural-Language-Inference/');
+          leanCloud.getCommentCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2020/01/23/Natural-Language-Inference/', function(count){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2020/01/23/Natural-Language-Inference/', function(isThumbUp){
+              var el = document.querySelector('#hashit_4212ffa4ddd6ea93066e78a7573e33f66d79de2b61d4ca85c75ad03bfe9b5269 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+          
+          
+          // start caching post visit and comment counts
+          leanCloud.fetchIsThumbUp('/2020/01/09/hello-world/', json.ip);
+          leanCloud.fetchCommentCount('/2020/01/09/hello-world/');
+          leanCloud.fetchVisitCount('/2020/01/09/hello-world/');
+          leanCloud.fetchThumbUpCount('/2020/01/09/hello-world/');
+          leanCloud.getCommentCount('/2020/01/09/hello-world/', function(count){
+              var el = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 .card-comment-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getVisitCount('/2020/01/09/hello-world/', function(count){
+              var el = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 .card-visit-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.getThumbUpCount('/2020/01/09/hello-world/', function(count){
+              var el = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 .card-thumbup-count');
+              if(el) el.innerHTML = count;
+          });
+          leanCloud.isThumbUp('/2020/01/09/hello-world/', function(isThumbUp){
+              var el = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 .card-thumbup-container i');
+              if(el){
+                if(isThumbUp){
+                  el.className = 'fas fa-thumbs-up';
+                }else{
+                  el.className = 'far fa-thumbs-up';
+                }
+              }
+          });
+        
+      }
+    })
+    }
+  
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+<!-- 
+<script src="/js/post.js"></script>
+ -->
+
+
+<script src="/js/headroom.min.js"></script>
+
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
+// console.log(post);
+// $('.Card').each(function(){
+//     var post_url = $(this).attr('id');
+//     var true_url = $(this).find('.Card-title a').first().attr('href');
+//     var card = this;
+//     post.getCommentCount(post_url, function(count){
+//         $(card).find('.card-comment-count').first().text(count);
+//     });
+//     post.getVisitCount(post_url, function(count){
+//         $(card).find('.card-visit-count').first().text(count);
+//     });
+    
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
