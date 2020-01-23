@@ -212,46 +212,6 @@ crossorigin="anonymous"></script>
 
 
 
-<div class='Card-archive' id='hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725' data-name='2020 Happy New Year' data-version=''>
-	<mark class='Card-badge'></mark>
-	<div class="Card-body">
-		<h3 class='Card-title'>
-			
-				<a href="/2020/01/09/First-post-on-2020/">
-			
-			2020 Happy New Year</a>
-		</h3>
-		<div class="Card-meta">
-			<div class='Card-tags'></div>
-			<ul>
-					<li>
-						<a href="/archives/">
-							<i class='fa fa-calendar'></i> 2020-01-09
-						</a>
-					</li>
-					
-					
-					<li>
-						<a href="/2020/01/09/First-post-on-2020/#article-comment">
-							<i class='fa fa-comments'></i> <span class='card-comment-count'>0</span>
-						</a>
-					</li>
-					<li>
-						<i class="fa fa-eye"></i> <span class='card-visit-count'>0</span>
-					</li>
-					
-					
-			</ul>
-		</div>
-	</div>
-</div>
-
-	
-		
-
-
-
-
 <div class='Card-archive' id='hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7' data-name='Hello World' data-version=''>
 	<mark class='Card-badge'></mark>
 	<div class="Card-body">
@@ -442,14 +402,6 @@ crossorigin="anonymous"></script>
           
           
           
-            var postBadge = document.querySelector('#hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725 mark.Card-badge');
-            $(postBadge).fadeOut();
-            
-          
-        
-          
-          
-          
             var postBadge = document.querySelector('#hashit_c0b401f9f0f984eaa9568601781c96895e04389116261d6962dbded7ef524ea7 mark.Card-badge');
             $(postBadge).fadeOut();
             
@@ -470,36 +422,6 @@ crossorigin="anonymous"></script>
       success: function(){
           LeanCloud.init('dHoldmaObAg5RXr9ctIIeCU2-gzGzoHsz', 'vjbC9f3Q6bm7tpA59sHStSjh');
           var leanCloud = LeanCloud.getInstance();
-        
-          
-          
-          // start caching post visit and comment counts
-          leanCloud.fetchIsThumbUp('/2020/01/09/First-post-on-2020/', json.ip);
-          leanCloud.fetchCommentCount('/2020/01/09/First-post-on-2020/');
-          leanCloud.fetchVisitCount('/2020/01/09/First-post-on-2020/');
-          leanCloud.fetchThumbUpCount('/2020/01/09/First-post-on-2020/');
-          leanCloud.getCommentCount('/2020/01/09/First-post-on-2020/', function(count){
-              var el = document.querySelector('#hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725 .card-comment-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getVisitCount('/2020/01/09/First-post-on-2020/', function(count){
-              var el = document.querySelector('#hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725 .card-visit-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.getThumbUpCount('/2020/01/09/First-post-on-2020/', function(count){
-              var el = document.querySelector('#hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725 .card-thumbup-count');
-              if(el) el.innerHTML = count;
-          });
-          leanCloud.isThumbUp('/2020/01/09/First-post-on-2020/', function(isThumbUp){
-              var el = document.querySelector('#hashit_93305bde6e5e11fdb5c3c70d9003d156f7cc11684f98763eea510b2823735725 .card-thumbup-container i');
-              if(el){
-                if(isThumbUp){
-                  el.className = 'fas fa-thumbs-up';
-                }else{
-                  el.className = 'far fa-thumbs-up';
-                }
-              }
-          });
         
           
           
