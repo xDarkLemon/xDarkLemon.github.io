@@ -1,113 +1,92 @@
 ---
 title: 2021科大讯飞鸟鸣识别比赛总结
+tags:
+ - Sound Recognition
+ - Audio Processing
+categories:
+ - Competition
 ---
-
-# 科大讯飞鸟鸣识别比赛总结
 
 ## 比赛介绍
 
-#### 赛事链接 
+**赛事链接：**[科大讯飞：鸟类鸣叫声识别挑战赛](https://challenge.xfyun.cn/topic/info?type=bird-call)
 
-[科大讯飞：鸟类鸣叫声识别挑战赛](https://challenge.xfyun.cn/topic/info?type=bird-call)
+**任务描述：**鸟类鸣叫声识别挑战赛旨在增强自动鸟类鸣叫声识别技术，预测出每个测试音频中出现的鸟类物种。测试音频文件只包含单一的鸟类物种，预测在音频文件级别进行，不需要开始和结束的时间戳，属于单标签分类任务。
 
-#### 任务描述
+**数据说明：**训练数据集包含100类鸟声数据，存在类别不均衡，真实背景噪音。不可以使用外部数据及预训练模型，不可以进行人工端点检测。
 
-鸟类鸣叫声识别挑战赛旨在增强自动鸟类鸣叫声识别技术，预测出每个测试音频中出现的鸟类物种。测试音频文件只包含单一的鸟类物种，预测在音频文件级别进行，不需要开始和结束的时间戳，属于单标签分类任务。
-
-#### 数据说明
-
-训练数据集包含100类鸟声数据，存在类别不均衡，真实背景噪音。不可以使用外部数据及预训练模型，不可以进行人工端点检测。
-
-#### 相关比赛
+### 相关比赛
 
 1. [Kaggle: Freesound Audio Tagging 2019](https://www.kaggle.com/c/freesound-audio-tagging-2019)
 
    通用音频分类，多标签。
 
-   > The audio data is labeled using a vocabulary of 80 labels from Google’s AudioSet Ontology, covering diverse topics: Guitar and other Musical instruments, Percussion, Water, Digestive, Respiratory sounds, Human voice, Human locomotion, Hands, Human group actions, Insect, Domestic animals, Glass, Liquid, Motor vehicle (road), Mechanisms, Doors, and a variety of Domestic sounds. 
+   *The audio data is labeled using a vocabulary of 80 labels from Google’s AudioSet Ontology, covering diverse topics: Guitar and other Musical instruments, Percussion, Water, Digestive, Respiratory sounds, Human voice, Human locomotion, Hands, Human group actions, Insect, Domestic animals, Glass, Liquid, Motor vehicle (road), Mechanisms, Doors, and a variety of Domestic sounds.*
 
 2. [Kaggle: Cornell Birdcall Identification](https://www.kaggle.com/c/birdsong-recognition)
 
-#### 相关工作
+### 相关工作
 
-1. [Kaggle: Freesound Audio Tagging 2019 第一名方案](https://github.com/lRomul/argus-freesound)
+1. [Kaggle: Freesound Audio Tagging 2019 第一名方案](https://github.com/lRomul/argus-freesound)：有完整的音频预处理步骤和模型训练，使用了作者自己写的轻量级深度学习框架[argus](https://github.com/lRomul/argus)。本方案使用了基于CNN的模型，它的数据增强的作用很大，值得参考。该方案是我们的最终提交版本的baseline。
 
-   有完整的音频预处理步骤和模型训练，使用了作者自己写的轻量级深度学习框架[argus](https://github.com/lRomul/argus)。本方案使用了基于CNN的模型，它的数据增强的作用很大，值得参考。该方案是我们的最终提交版本的baseline。
+2. [FAT 2019 数据预处理流程](https://www.kaggle.com/daisukelab/creating-fat2019-preprocessed-data)：上述第一名方案所参考的特征提取流程。
 
-2. [FAT 2019 数据预处理流程](https://www.kaggle.com/daisukelab/creating-fat2019-preprocessed-data)
+3. [Kaggle: Cornell Birdcall Identification 第一名方案]( https://github.com/ryanwongsa/kaggle-birdsong-recognition)：使用了事件检测的流程，用了语音事件检测的预训练模型PANN。该比赛的任务似乎与本比赛不是很相符，因此没有采用。可参考[相关博客](https://blog.csdn.net/GioDio/article/details/108673532?utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~searchFromBaidu~default-10.test_version_3&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~searchFromBaidu~default-10.test_version_)。
 
-   上述第一名方案所参考的特征提取流程。
-
-3. [Kaggle: Cornell Birdcall Identification 第一名方案]( https://github.com/ryanwongsa/kaggle-birdsong-recognition)
-
-   使用了事件检测的流程，用了语音事件检测的预训练模型PANN。该比赛的任务似乎与本比赛不是很相符，因此没有采用。可参考[相关博客](https://blog.csdn.net/GioDio/article/details/108673532?utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~searchFromBaidu~default-10.test_version_3&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~searchFromBaidu~default-10.test_version_)。
-
-4. [Poland Birdsong Classification](https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b)
-
-   给出了一套数据处理流程，指出了数据现存的一些问题。
+4. [Poland Birdsong Classification](https://towardsdatascience.com/sound-based-bird-classification-965d0ecacb2b)：给出了一套数据处理流程，指出了数据现存的一些问题。
 
 ## 观察数据
 
-#### 类别比例
+1. **类别比例**（数据包括train set和dev set）。坐标：类别-占比。
 
-包括train set和dev set）。坐标：类别-占比。
+   **分析：** 需要处理类别不平衡，考虑（1）重采样（2） Focal Loss。  
+
+   #### 
 
 ![类别比例（包括train set和dev set）](https://img-blog.csdnimg.cn/46e4da89282143f79fe8690b01346100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l1enVydUhhbnl1,size_16,color_FFFFFF,t_70)
 
-**分析：** 需要处理类别不平衡，考虑：（1) 重采样（2) Focal Loss。
+2. **音频长度**。坐标：采样点数-样本数。
 
-  
-
-#### 音频长度 
-
-坐标：采样点数-样本数。
+   **分析：** 需要考虑截取多长的时间片段作为输入。
 
 ![音频长度](https://img-blog.csdnimg.cn/9c7e9635e4644ad7a9df57791b28dba3.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l1enVydUhhbnl1,size_16,color_FFFFFF,t_70)
 
-**分析： ** 需要考虑截取多长的时间片段作为输入。
-
 ## 特征提取
 
-语音的特征提取主要使用MFCC（梅尔倒谱系数），实际应用中发现使用log梅尔谱系数的情况也较多，同时通过比较两种方法得到的频谱图，本次比赛我们采用的是log梅尔谱系数。
-
-**傅里叶变换参考资料：** [博客园 - 数字信号处理--傅里叶变换](https://www.cnblogs.com/luoqingyu/p/5929389.html)
+语音的特征提取主要使用MFCC（梅尔倒谱系数），实际应用中发现使用log梅尔谱系数的情况也较多，同时通过比较两种方法得到的频谱图，本次比赛我们采用的是log梅尔谱系数。建议阅读参考资料 [博客园 - 数字信号处理--傅里叶变换](https://www.cnblogs.com/luoqingyu/p/5929389.html) 和 [知乎 - 语音识别第4讲：语音特征参数MFCC](https://zhuanlan.zhihu.com/p/88625876)。
 
 ### MFCC
 
-#### 参考资料
-
-[知乎 - 语音识别第4讲：语音特征参数MFCC](https://zhuanlan.zhihu.com/p/88625876)
-
 #### 设计原理
 
-> 根据人耳听觉机理的研究发现，人耳对不同频率的声波有不同的听觉敏感度。从200Hz到5000Hz的语音信号对语音的清晰度影响对大。两个响度不等的声音作用于人耳时，则响度较高的频率成分的存在会影响到对响度较低的频率成分的感受，使其变得不易察觉，这种现象称为掩蔽效应。由于频率较低的声音在内耳蜗基底膜上行波传递的距离大于频率较高的声音，故一般来说，低音容易掩蔽高音，而高音掩蔽低音较困难。在低频处的声音掩蔽的临界带宽较高频要小。所以，人们从低频到高频这一段频带内按临界带宽的大小由密到疏安排一组带通滤波器，对输入信号进行滤波。将每个带通滤波器输出的信号能量作为信号的基本特征，对此特征经过进一步处理后就可以作为语音的输入特征。
+*根据人耳听觉机理的研究发现，人耳对不同频率的声波有不同的听觉敏感度。从200Hz到5000Hz的语音信号对语音的清晰度影响对大。两个响度不等的声音作用于人耳时，则响度较高的频率成分的存在会影响到对响度较低的频率成分的感受，使其变得不易察觉，这种现象称为掩蔽效应。由于频率较低的声音在内耳蜗基底膜上行波传递的距离大于频率较高的声音，故一般来说，低音容易掩蔽高音，而高音掩蔽低音较困难。在低频处的声音掩蔽的临界带宽较高频要小。所以，人们从低频到高频这一段频带内按临界带宽的大小由密到疏安排一组带通滤波器，对输入信号进行滤波。将每个带通滤波器输出的信号能量作为信号的基本特征，对此特征经过进一步处理后就可以作为语音的输入特征。*
 
 #### 基本流程
 
 连续语音 -> 预加重 ->分帧 -> 加窗 -> FFT -> Mel滤波器组 -> 对数运算 -> DCT（离散余弦变换）
 
-（1）预加重：增强高频部分，即通过一个高通滤波器。频域变换为 $H(z)=1-\mu z^{-1}$，对应的时域变换为$y(t)=x(t)-\alpha x(t)$，这是实际计算时使用的。
-（2）分帧：信号的频谱随时间变化，因此对整个信号进行傅立叶变换没有意义。假设频率在很短的时间内是平稳的，所以在短时间帧内进行傅里叶变换。
-（3）加窗：以增加帧左端和右端的连续性。为了抵消FFT所假设的数据是无限的，并减少频谱泄漏。
-（4）FFT：时域->频域
-（5）Mel滤波器组：一系列滤波器，对不同频率设置不同的门限。
-（6）对数运算
-（7）DCT（离散余弦变换）：去除一些变化过快的系数，这些系数在ASR任务中没有帮助。
+（1）**预加重**：增强高频部分，即通过一个高通滤波器。频域变换为 $H(z)=1-\mu z^{-1}$，对应的时域变换为$y(t)=x(t)-\alpha x(t)$，这是实际计算时使用的。
+（2）**分帧**：信号的频谱随时间变化，因此对整个信号进行傅立叶变换没有意义。假设频率在很短的时间内是平稳的，所以在短时间帧内进行傅里叶变换。
+（3）**加窗**：以增加帧左端和右端的连续性。为了抵消FFT所假设的数据是无限的，并减少频谱泄漏。
+（4）**FFT**：时域->频域
+（5）**Mel滤波器组**：一系列滤波器，对不同频率设置不同的门限。
+（6）**对数运算**
+（7）**DCT（离散余弦变换）**：去除一些变化过快的系数，这些系数在ASR任务中没有帮助。
 
 #### 尝试的几种实现
 
-（1）`librosa.feature.mfcc`
+1. `librosa.feature.mfcc`
 
 ```python
 signal, sample_rate = librosa.load(wav_file)
 mfcc_feat = librosa.feature.mfcc(signal,sr=sample_rate,n_mfcc=40)
 ```
 
-（2）`python_speech_features.mfcc`
+2. `python_speech_features.mfcc`
 
-**Note:** *librosa和python_speech_features对mfcc的实现不包括预加重。*
+**Note:** 以上两种实现不包括预加重。
 
-（3）手动实现
+3. 手动实现
 
 ```python
 from scipy.fftpack import dct
@@ -173,9 +152,7 @@ def extract_mfcc_feature(signal,sample_rate,n_mel_flt=40,n_ceps=40):
 
 ### LogMelSpec
 
-与MFCC区别在于没有DCT。
-
-实现：`librosa.features.melspectrogram`
+LogMelSpec与MFCC区别在于它没有DCT。可用的实现是`librosa.features.melspectrogram`。
 
 ```python
 signal, sample_rate = librosa.load(wav_file)
@@ -183,11 +160,9 @@ melspec = librosa.feature.melspectrogram(signal,sr=sample_rate,n_fft=1024,hop_le
 logmelspec = librosa.power_to_db(melspec)
 ```
 
-#### mfcc不同库、logmelspec的对比
+### 不同提取特征方式的对比
 
-参数：mel滤波器数量均为128.
-
-代码详见[notebook](https://github.com/zll17/BirdRec/blob/main/preprocessing/feature_extract.ipynb)。
+我们希望通过观察特征图像来判断那种特征更合适。参与对比的有mfcc的两种实现和logmelspec，他们的特征数量（即梅尔滤波器数量）均设置为128，实验代码详见[notebook](https://github.com/zll17/BirdRec/blob/main/preprocessing/feature_extract.ipynb)。通过对比，我们最终选用logmelspec作为特征。
 
 **wav时域图：**
 
@@ -205,11 +180,9 @@ logmelspec = librosa.power_to_db(melspec)
 
 <img src="imgs/logmelspec.png"  />
 
-通过对比，我们最终选用logmelspec作为feature。
-
 ## 数据增强
 
-目前对语音信号的建模方式为：对整段音频信号提取频谱图，将频谱图视为图像，沿该图像的时间轴取一小段定长片段，放入处理图像的模型中，如CNN等。因此数据增强的对象是提取的特征图像，数据增强会包括截取、加噪等。特征的形状：dim_x=整个音频的帧数，dim_y=特征数量(滤波器个数)
+目前对语音信号的建模方式为：对整段音频信号提取频谱图，将频谱图视为图像，沿该图像的时间轴取一小段定长片段，放入处理图像的模型中，如CNN等。因此数据增强的对象是提取的特征图像，数据增强会包括截取、加噪等。特征的形状：dim_x=整个音频的帧数，dim_y=特征数量(滤波器个数)。
 
 我们主要参考[Kaggle: Freesound Audio Tagging 2019 第一名方案](https://github.com/lRomul/argus-freesound#augmentations)，所使用的数据增强包括以下步骤：
 
@@ -223,7 +196,6 @@ logmelspec = librosa.power_to_db(melspec)
 
    （3）进而引发的思考是，截取片段的方法只用到了局部信息，没有用到全局信息（如鸟鸣间隔，鸟一共名叫多少声等等），因此后续我们尝试了序列模型（CNN特征提取器+LSTM后端）来利用全局信息。
 
-   % TODO： 加图
 
 2. **随机缩放**
 
@@ -235,7 +207,6 @@ logmelspec = librosa.power_to_db(melspec)
 
    我们截至比赛截至时只尝试了freesound使用的矩形mask和我们增加的sin函数形mask。（但提交版本暂未加入sin函数形mask，也尚未实验验证其效果。）图像加噪的效果如下：
 
-   % TODO：add sin
 
    <img src="imgs/mask.png"  />
    
@@ -255,7 +226,9 @@ pre_emphasised_signal = np.append(signal[0], signal[1:] - pre_emphasis * signal[
 
 ## 模型
 
-考虑的模型有几种：（1）Vision Transformer（2）CNN （3）CNN特征提取+序列模型（LSTM/Transformer）
+- Vision Transformer
+- CNN 
+- CNN特征提取+序列模型（LSTM/Transformer）
 
 ### Vision Transformer
 
@@ -265,19 +238,13 @@ pre_emphasised_signal = np.append(signal[0], signal[1:] - pre_emphasis * signal[
 
 **可用的开源实现：**
 
-1. [timm](https://github.com/rwightman/pytorch-image-models)
+1. [timm](https://github.com/rwightman/pytorch-image-models)：一个包含各种视觉模型的库。使用方法可以参考[知乎 - 视觉Transformer优秀开源工作：timm库vision transformer代码解读](https://zhuanlan.zhihu.com/p/350837279)。官方介绍：*PyTorch image models, scripts, pretrained weights -- ResNet, ResNeXT, EfficientNet, EfficientNetV2, NFNet, Vision Transformer, MixNet, MobileNet-V3/V2, RegNet, DPN, CSPNet, and more*。
 
-   > PyTorch image models, scripts, pretrained weights -- ResNet, ResNeXT, EfficientNet, EfficientNetV2, NFNet, Vision Transformer, MixNet, MobileNet-V3/V2, RegNet, DPN, CSPNet, and more。
-
-   是一个包含各种图像模型的库。使用方法可以参考[知乎 - 视觉Transformer优秀开源工作：timm库vision transformer代码解读](https://zhuanlan.zhihu.com/p/350837279)。
-
-2. [vit-pytorch](https://github.com/lucidrains/vit-pytorch)
-
-   是一个包含各种Vision Transformer的库。
+2. [vit-pytorch](https://github.com/lucidrains/vit-pytorch)：一个包含各种Vision Transformer的库。
 
 #### 验证性实验
 
-为了测试ViT的可用性，先在kaggle的[猫狗分类数据集](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data)上跑了ViT，准确率为\~0.6，这并不高。在我们的Bird 4k数据集上（为方便调试取了一个小数据集，大小为4k，由每类别随机取等数量的样本得到）上得到的准确率为\~0.02。
+为了测试ViT的可用性，先在[Kaggle猫狗分类数据集](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data)上跑了ViT，准确率为\~0.6，这并不高。在我们的Bird 4k数据集上（为方便调试取了一个小数据集，大小为4k，由每类别随机取等数量的样本得到）上得到的准确率为\~0.02。
 
 为了测试CvT的可用性，先在通用图像分类数据集[caltech256](http://www.vision.caltech.edu/Image_Datasets/Caltech256/)上跑了CvT，准确率为\~0.15。
 
@@ -285,9 +252,9 @@ pre_emphasised_signal = np.append(signal[0], signal[1:] - pre_emphasis * signal[
 
 Transformer是在使用了预训练后才大放异彩（BERT），因此这里我们也考虑预训练。因为没有找到现成的Vision Transformer在图像或者在语音数据上的预训练模型，我们打算自己写预训练。能想到的预训练的方法有两种：
 
-1. 自编码器。这是非常符合直觉的，但可能不好训练，因为要恢复的内容太多，CvT可能会很复杂。
+1. **自编码器**。这是非常符合直觉的，但可能不好训练，因为要恢复的内容太多，CvT可能会很复杂。
 
-2. 像BERT一样设计一个预测Mask的任务。训练起来可能会更容易（因为预测的内容只是局部），但关键是设计的预测任务要确保合理有效、能帮到后面的分类任务。
+2. **预测Mask的任务**（像BERT那样）。训练起来可能会更容易（因为预测的内容只是局部），但关键是设计的预测任务要确保合理有效、能帮到后面的分类任务。
 
 首先我们为CvT设计了自编码器：
 
@@ -312,6 +279,8 @@ Transformer是在使用了预训练后才大放异彩（BERT），因此这里�
 ### CNN
 
 从这里开始，我们使用完整数据集训练。在训练Vision Transformer时，为了节约时间，我们使用的是一个大小为4k子数据集。
+
+#### Simple CNN
 
 首先尝试了一个简单的CNN并使用了batchnorm（[notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_SimpleCNN_dataAug_Bird.ipynb)），在完整数据集上未使用数据增强得到的结果是valid acc=0.58，使用数据增强得到的结果是valid acc=0.68。此外，也尝试了ResNet101和ResNet50，均未达到更好效果。
 
@@ -350,7 +319,7 @@ class Classifier(nn.Module):
         return x
 ```
 
-
+#### 改进的CNN：AuxSkipAttn
 
 进而尝试了freesound方案的模型AuxSkipAttn（[notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_AuxSkipAttn_dataAug_Bird.ipynb)）作为baseline，简言之它是一个添加了Attention，Skip connection和Auxiliary classifier的CNN，得到的结果是valid acc=0.72，提交测试结果test acc=0.64。这个结果说明测试数据和训练数据分布不一致，因此训练数据不平衡的问题需要引起重视并解决。
 
@@ -367,8 +336,6 @@ class Classifier(nn.Module):
         x, aux3, aux2, aux1 = self.aux_skip_attn(x)
         return x, aux3, aux2, aux1
 ```
-
-
 
 #### 预训练模型
 
@@ -426,21 +393,19 @@ class PreTrainer(nn.Module):
         return out
 ```
 
-实验结果：预训练loss下降非常缓慢，训练30epoch后停止，分类器valid acc=0.7。可能的原因：预训练模型没有训好。可改进的点：（1）ConvDecoder可以更好地设计（这里只是凭直觉设计的）（2）预训练使用的4个数据集的数据量为42011，原始数据量为10906，可能仍不够多。
+**实验结果：**预训练loss下降非常缓慢，训练30epoch后停止，分类器valid acc=0.7。可能的原因：预训练模型没有训好。可改进的点：（1）ConvDecoder可以更好地设计（这里只是凭直觉设计的）（2）预训练使用的4个数据集的数据量为42011，原始数据量为10906，可能仍不够多。
 
 #### 规整化隐空间
 
 希望各类别的数据能符合高斯混合分布，因此需要对隐空间做一个变换来使之符合这种分布。我们分别尝试了：
 
-- Deep Normalize Flow (DNF) ([notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_AuxSkipAttn_DNF_dataAug_Bird.ipynb))
+- **Deep Normalize Flow (DNF)** ([notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_AuxSkipAttn_DNF_dataAug_Bird.ipynb))
 
   Flow模型是一种生成式模型，这里利用了其归一化的原理。
 
-  > A flow-based generative model is a generative model used in machine learning that explicitly models a probability distribution by leveraging normalizing flow,[1] which is a statistical method using the change-of-variable law of probabilities to transform a simple distribution into a complex one.
-  >
-  > -- [Wikipedia](https://en.wikipedia.org/wiki/Flow-based_generative_model)
+  *A flow-based generative model is a generative model used in machine learning that explicitly models a probability distribution by leveraging normalizing flow,[1] which is a statistical method using the change-of-variable law of probabilities to transform a simple distribution into a complex one. -- [Wikipedia](https://en.wikipedia.org/wiki/Flow-based_generative_model)*
 
-- Wasserstein Auto-Encoder (WAE) ([notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_AuxSkipAttn_WLoss_dataAug_Bird.ipynb)) 
+- **Wasserstein Auto-Encoder (WAE)** ([notebook](https://github.com/zll17/BirdRec/blob/main/train_script/model_AuxSkipAttn_WLoss_dataAug_Bird.ipynb)) 
 
 ### CNN特征提取+序列模型（LSTM/Transformer）
 
@@ -452,5 +417,5 @@ class PreTrainer(nn.Module):
 
 ## 致谢
 
-感谢队友[@方阿](https://github.com/zll17)源源不断的好点子和超强的行动力，与你的合作是对我关于合作的理想的卓越实现，期待下一次！ :-)
+感谢队友[@方阿](https://github.com/zll17)的鼎力支持，他总是有源源不断的好点子和超强的行动力。与他的合作是对我理想中的合作模式的卓越实践。期待下一次！ :-)
 
