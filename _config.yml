@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Neko Mt.Tai
+subtitle: '' # 'Neko Mt.Tai loves fish.'
+description: 'Welcome! Neko Mt.Tai is my lovely little cat, he asked me to help with sharing his thoughts and moments here. So I do him a favor.'
 keywords:
-author: John Doe
+author: Neko Mt.Tai
 language: en
 timezone: ''
+
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -68,7 +69,7 @@ index_generator:
   order_by: -date
 
 # Category & Tag
-default_category: uncategorized
+default_category: Notes 
 category_map:
 tag_map:
 
@@ -99,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: cactus  # landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
