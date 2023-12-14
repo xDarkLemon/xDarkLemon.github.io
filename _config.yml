@@ -3,14 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Neko Mt.Tai
-subtitle: '' # 'Neko Mt.Tai loves fish.'
-description: 'Welcome! Neko Mt.Tai is my lovely little cat, he asked me to help with sharing his thoughts and moments here. So I do him a favor.'
+title: Yibo Liu
+subtitle: ''
+description: 'I am Yibo Liu, a first year Ph.D. student in Computer Science at University of Victoria, under the supervision of Prof. Teseo Schneider. Currently I am working on physics simulation and geometric processing. Prior to this, I obtained my M.S. in Computer Science from New York University, where I conducted research on multimodal knowledge graph representations. I obtained B.Eng. in Electronic Engineering from Beijing University of Posts and Telecommunications. My research interests span on natural language process and computer graphics. My industrial experience includes an internship at Data, Knowledge and Intelligence group at Microsoft Research Asia, where I worked on chart recommendation from tabular data.'
 keywords:
-author: Neko Mt.Tai
+author: Yibo Liu
 language: en
 timezone: ''
 
+# # not working
+# social_links:
+#   github: https://github.com/xDarkLemon
+#   twitter: https://twitter.com/_liuyibo
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
