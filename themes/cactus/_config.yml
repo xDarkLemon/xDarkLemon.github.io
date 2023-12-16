@@ -25,8 +25,9 @@ nav:
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
+  google: https://scholar.google.com/citations?user=FQExy98AAAAJ&hl=en&oi=ao
   github: http://github.com/xdarklemon
-  # twitter: /
+  twitter: https://twitter.com/_liuyibo
   # facebook: /
   # linkedin: /
   # mail: mailto:name@email.com
