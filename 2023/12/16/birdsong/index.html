@@ -9,20 +9,20 @@
     <meta name="description" content="比赛介绍赛事链接：科大讯飞：鸟类鸣叫声识别挑战赛 任务描述：鸟类鸣叫声识别挑战赛旨在增强自动鸟类鸣叫声识别技术，预测出每个测试音频中出现的鸟类物种。测试音频文件只包含单一的鸟类物种，预测在音频文件级别进行，不需要开始和结束的时间戳，属于单标签分类任务。 数据说明：训练数据集包含100类鸟声数据，存在类别不均衡，真实背景噪音。不可以使用外部数据及预训练模型，不可以进行人工端点检测。 相关比赛 Kag">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2021科大讯飞鸟鸣识别比赛总结">
-<meta property="og:url" content="http://example.com/2023/12/14/birdsong/index.html">
+<meta property="og:url" content="http://example.com/2023/12/16/birdsong/index.html">
 <meta property="og:site_name" content="Yibo Liu">
 <meta property="og:description" content="比赛介绍赛事链接：科大讯飞：鸟类鸣叫声识别挑战赛 任务描述：鸟类鸣叫声识别挑战赛旨在增强自动鸟类鸣叫声识别技术，预测出每个测试音频中出现的鸟类物种。测试音频文件只包含单一的鸟类物种，预测在音频文件级别进行，不需要开始和结束的时间戳，属于单标签分类任务。 数据说明：训练数据集包含100类鸟声数据，存在类别不均衡，真实背景噪音。不可以使用外部数据及预训练模型，不可以进行人工端点检测。 相关比赛 Kag">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/46e4da89282143f79fe8690b01346100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l1enVydUhhbnl1,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/9c7e9635e4644ad7a9df57791b28dba3.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1l1enVydUhhbnl1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/wav_img.png/">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/mfcc.png/">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/python_speech.png">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/logmelspec.png">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/mask.png">
-<meta property="og:image" content="http://example.com/2023/12/14/birdsong/imgs/cvt_ptr.png/">
-<meta property="article:published_time" content="2023-12-14T03:26:56.952Z">
-<meta property="article:modified_time" content="2023-12-14T03:26:56.952Z">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/wav_img.png/">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/mfcc.png/">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/python_speech.png">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/logmelspec.png">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/mask.png">
+<meta property="og:image" content="http://example.com/2023/12/16/birdsong/imgs/cvt_ptr.png/">
+<meta property="article:published_time" content="2023-12-16T03:31:51.850Z">
+<meta property="article:modified_time" content="2023-12-16T03:31:51.850Z">
 <meta property="article:author" content="Yibo Liu">
 <meta property="article:tag" content="Sound Recognition">
 <meta property="article:tag" content="Audio Processing">
@@ -75,7 +75,7 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/archives/">Blog</a></li>
          
           <li><a href="/projects_url">Projects</a></li>
         
@@ -85,7 +85,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post " href="/2023/12/14/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Previous post " href="/2023/12/16/hello-world/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
@@ -99,17 +99,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/14/birdsong/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/14/birdsong/&text=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/14/birdsong/&is_video=false&description=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=2021科大讯飞鸟鸣识别比赛总结&body=Check out this article: http://example.com/2023/12/14/birdsong/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/14/birdsong/&name=2021科大讯飞鸟鸣识别比赛总结&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/14/birdsong/&t=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/16/birdsong/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/16/birdsong/&text=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/16/birdsong/&is_video=false&description=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=2021科大讯飞鸟鸣识别比赛总结&body=Check out this article: http://example.com/2023/12/16/birdsong/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/16/birdsong/&name=2021科大讯飞鸟鸣识别比赛总结&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/16/birdsong/&t=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -138,9 +138,9 @@
       
     <div class="postdate">
       
-        <time datetime="2023-12-14T03:26:56.952Z" itemprop="datePublished">2023-12-14</time>
+        <time datetime="2023-12-16T03:31:51.850Z" itemprop="datePublished">2023-12-16</time>
         
-        (Updated: <time datetime="2023-12-14T03:26:56.952Z" itemprop="dateModified">2023-12-14</time>)
+        (Updated: <time datetime="2023-12-16T03:31:51.850Z" itemprop="dateModified">2023-12-16</time>)
         
       
     </div>
@@ -346,7 +346,7 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/archives/">Blog</a></li>
          
           <li><a href="/projects_url">Projects</a></li>
         
@@ -359,17 +359,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/14/birdsong/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/14/birdsong/&text=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/14/birdsong/&is_video=false&description=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=2021科大讯飞鸟鸣识别比赛总结&body=Check out this article: http://example.com/2023/12/14/birdsong/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/14/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/14/birdsong/&name=2021科大讯飞鸟鸣识别比赛总结&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/14/birdsong/&t=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/16/birdsong/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/16/birdsong/&text=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/16/birdsong/&is_video=false&description=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=2021科大讯飞鸟鸣识别比赛总结&body=Check out this article: http://example.com/2023/12/16/birdsong/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/16/birdsong/&title=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/16/birdsong/&name=2021科大讯飞鸟鸣识别比赛总结&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/16/birdsong/&t=2021科大讯飞鸟鸣识别比赛总结"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -401,7 +401,7 @@
          
           <li><a href="/about/">About</a></li>
          
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/archives/">Blog</a></li>
          
           <li><a href="/projects_url">Projects</a></li>
         
