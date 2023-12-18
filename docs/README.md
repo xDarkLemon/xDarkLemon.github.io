@@ -3,7 +3,7 @@ pageClass: home-page
 # some data for the components
 
 name: Yibo Liu
-profile: /myprofile.jpeg
+profile: /myprofile2.jpeg
 
 socials:
   - title: google-scholar
@@ -19,7 +19,7 @@ socials:
     link: https://twitter.com/_liuyibo
 
 
-cv: https://en.wikipedia.org/wiki/Harry_Potter
+# cv: https://en.wikipedia.org/wiki/Harry_Potter
 bio: Computer Science
 email: yl6769 (at) nyu (dot) edu
 ---
@@ -53,16 +53,17 @@ B.Eng. in Electronic Engineering, Sept 2015 - Jun 2019
 ## Internships
 - **Microsoft Research Asia** <br/>
 Intern at Data, Knowledge and Intelligence group, Aug 2020 - Feb 2021
-
+  - Contributed to the research on Table2Charts, delivered the technique to Bing search and to Excel spreadsheet intelligence.
+  - Designed multilingual key-phrase extraction algorithm for questionnaire word cloud used in Forms Ideas and in Teams poll.
 - **Tsinghua University** <br/>
 Research Intern at Center for Speech and Language Technologies, 2019
-
+  - Worked on ancient Chinese poetry generation.
 ## Publication
 
 
-[→ Full list](/projects/)
+<!-- [→ Full list](/projects/) -->
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/01.png" hideBorder=true>
 
   **MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI**
   
@@ -70,11 +71,11 @@ Research Intern at Center for Speech and Language Technologies, 2019
 
   *arXiv* 2311.16502, Nov. 2023
 
-  [[arXiv](https://arxiv.org/abs/2311.16502)] [[web](https://mmmu-benchmark.github.io)]
+  [[Paper](https://arxiv.org/abs/2311.16502)] [[Web Page](https://mmmu-benchmark.github.io)]
 
 </ProjectCard>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/02.png" hideBorder=true>
 
   **Endowing Language Models with Multimodal Knowledge Graph Representations**
 
@@ -82,23 +83,25 @@ Research Intern at Center for Speech and Language Technologies, 2019
 
   *arXiv* 2206.13163, Jun. 2022
 
-  [[arXiv](https://arxiv.org/abs/2206.13163)]
+  [[Paper](https://arxiv.org/abs/2206.13163)]
 
 </ProjectCard>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/03.png" hideBorder=true>
 
   **VisualSem: a high-quality knowledge graph for vision and language**
 
 Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clara Vania, Iacer Calixto
 
-*Proceedings of the 1st Workshop on Multilingual Representation Learning*, pp. 138-152, Nov. 2021.
+*Proceedings of the 1st Workshop on Multilingual Representation Learning*, pp. 138-152, Nov. 2021. *(colocated with EMNLP 2021)*
 
-  [[paper](https://aclanthology.org/2021.mrl-1.13.pdf)]
+  [[Paper](https://aclanthology.org/2021.mrl-1.13.pdf)] [[Slides](/files/MRL_slides.pdf)]
+
+  I was the **speaker** of the presentation.
 
 </ProjectCard>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/04.png" hideBorder=true>
 
   **Table2Charts: Recommending Charts by Learning Shared Table Representations**
 
@@ -106,7 +109,7 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 
 *Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery and Data Mining*, pp. 2389-2399, Aug. 2021
 
-  [[paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)]
+  [[Paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)] [[Code](https://github.com/microsoft/Table2Charts)]
 
 </ProjectCard>
 
@@ -115,39 +118,45 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 <ProjectCard image="/projects/1.png" hideBorder=true>
 
   **Neural Topic Model Library**
+  - The first Python library containing all cutting-edge neural topic models.
+  - Refactored the code base framework and rewrote the interfaces, making it has compatible APIs with Gensim
+LDA library.
+  - The second largest contributor to the repository. Collaborated with [Leilan Zhang](https://scholar.google.com/citations?user=FDeI9yUAAAAJ&hl=zh-CN).
 
-  [[code](https://github.com/zll17/Neural_Topic_Models/tree/dev_b)]
+  [[GitHub | 384 star :star: | 77 fork](https://github.com/zll17/Neural_Topic_Models/tree/dev_b)]
 
 </ProjectCard>
 
+<ProjectCard image="/projects/06.png" hideBorder=true>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+  **Lock-free Linked List Library for GPUs**
+  - The **first** library supporting all singly linked list operations on GPUs with CUDA.
+  - Achieveing 141x speedup for insertions and deletions compared to sequential operations.
+  - Individual contribution.
+
+  [[GitHub](https://github.com/xDarkLemon/Lock_Free_Linked_List_GPU/tree/master)]
+
+</ProjectCard>
+
+<ProjectCard image="/projects/07.png" hideBorder=true>
 
   **MMMU Benchmark for Expert AGI**
 
-  [[paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)] [[web](https://mmmu-benchmark.github.io)]
+  [[Paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)] [[Web Page](https://mmmu-benchmark.github.io)]
 
 </ProjectCard>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/10.png" hideBorder=true>
 
   **COIG-PC: Chinese Open Instruction Generalist Prompt Collection**
 
-  [[dataset](https://huggingface.co/datasets/BAAI/COIG-PC)]
-
-</ProjectCard>
-
-<ProjectCard image="/projects/1.png" hideBorder=true>
-
-  **Lock-free Linked List Library for GPUs**
-
-  [[code](https://github.com/xDarkLemon/Lock_Free_Linked_List_GPU/tree/master)]
+  [[Huggingface Dataset](https://huggingface.co/datasets/BAAI/COIG-PC)]
 
 </ProjectCard>
 
 ## Teaching
 
-Teaching Assistant for CSC503: Data Mining
+**Teaching Assistant** for CSC503: Data Mining
 
 ## Hobbies
 
