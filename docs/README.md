@@ -50,20 +50,34 @@ Summer Session, Jul 2016 - Aug 2016
 - **Beijing University of Posts and Telecommunications** <br/>
 B.Eng. in Electronic Engineering, Sept 2015 - Jun 2019
 
-## Internships
-- **Microsoft Research Asia** <br/>
+## Internship
+- **Microsoft Research Asia** (full-time, onsite) <br/>
 Intern at Data, Knowledge and Intelligence group, Aug 2020 - Feb 2021
-  - Contributed to the research on Table2Charts, delivered the technique to Bing search and to Excel spreadsheet intelligence.
+  - Contributed to the research on Table2Charts.
+  - Delivered Table2Charts technique to Bing search and to Excel spreadsheet intelligence.
   - Designed multilingual key-phrase extraction algorithm for questionnaire word cloud used in Forms Ideas and in Teams poll.
-- **Tsinghua University** <br/>
-Research Intern at Center for Speech and Language Technologies, 2019
-  - Worked on ancient Chinese poetry generation.
-## Publication
 
+## Research Experience
+
+- **Geometric Computing Lab, New York University** <br/>
+Independent project, supervised by [Teseo Schneider](http://web.uvic.ca/~teseo/) and [Daniele Panozzo](https://cims.nyu.edu/gcl/daniele.html), Sept 2022 - Apr 2023 \
+  Worked on GPU accelerated contact simulations in PolyFEM library.
+
+- **CILVR Lab, New York University** <br/> 
+Independent project, supervised by [Iacer Calixto](http://iacercalixto.github.io) and [Clara Vania](http://claravania.github.io), Mar 2020 - May 2021 \
+  Worked on learning robust mulilingual multimodal knowledge graph representations.
+
+- **Center for Speech and Language Technologies, Tsinghua University** <br/>
+Research intern, supervised by [Dong Wang](http://wangd.cslt.org), 2019  \
+  Worked on ancient Chinese poetry generation.
+
+
+## Publication
 
 <!-- [→ Full list](/projects/) -->
 
-<ProjectCard image="/projects/01.png" hideBorder=true>
+<ProjectCard image="/projects/01.png" >
+<!-- <ProjectCard image="/projects/01.png" hideBorder=true> -->
 
   **MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI**
   
@@ -75,7 +89,7 @@ Research Intern at Center for Speech and Language Technologies, 2019
 
 </ProjectCard>
 
-<ProjectCard image="/projects/02.png" hideBorder=true>
+<ProjectCard image="/projects/02.png" >
 
   **Endowing Language Models with Multimodal Knowledge Graph Representations**
 
@@ -87,7 +101,7 @@ Research Intern at Center for Speech and Language Technologies, 2019
 
 </ProjectCard>
 
-<ProjectCard image="/projects/03.png" hideBorder=true>
+<ProjectCard image="/projects/03.png" >
 
   **VisualSem: a high-quality knowledge graph for vision and language**
 
@@ -101,7 +115,7 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 
 </ProjectCard>
 
-<ProjectCard image="/projects/04.png" hideBorder=true>
+<ProjectCard image="/projects/04.png" >
 
   **Table2Charts: Recommending Charts by Learning Shared Table Representations**
 
@@ -113,9 +127,9 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 
 </ProjectCard>
 
-## Open-Source Contribution
+## Open-Source Projects
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/1.png" >
 
   **Neural Topic Model Library**
   - The first Python library containing all cutting-edge neural topic models.
@@ -127,7 +141,7 @@ LDA library.
 
 </ProjectCard>
 
-<ProjectCard image="/projects/06.png" hideBorder=true>
+<ProjectCard image="/projects/06.png" >
 
   **Lock-free Linked List Library for GPUs**
   - The **first** library supporting all singly linked list operations on GPUs with CUDA.
@@ -138,25 +152,57 @@ LDA library.
 
 </ProjectCard>
 
-<ProjectCard image="/projects/07.png" hideBorder=true>
+<ProjectCard image="/projects/07.png" >
 
   **MMMU Benchmark for Expert AGI**
+  - Collected college-level multimodal questions and conducted empirical studies on error analysis.
 
   [[Paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)] [[Web Page](https://mmmu-benchmark.github.io)]
 
 </ProjectCard>
 
-<ProjectCard image="/projects/10.png" hideBorder=true>
+<ProjectCard image="/projects/10.png" >
 
   **COIG-PC: Chinese Open Instruction Generalist Prompt Collection**
-
+  - Collected prompts to facilitate the fine-tuning and optimization of Chinese language models.
+  
   [[Huggingface Dataset](https://huggingface.co/datasets/BAAI/COIG-PC)]
 
 </ProjectCard>
 
+
+## Blog Posts
+
+[→ Full list](/article/)
+
+<ProjectCard image="/projects/08.png">
+
+  **2021科大讯飞鸟鸣识别比赛总结**
+
+鸟类鸣叫声识别挑战赛旨在增强自动鸟类鸣叫声识别技术，预测出每个测试音频中出现的鸟类物种。比赛中，探索了多种特征提取方法、数据增强方法，对音频频谱图使用图像分类算法进行分类，探索了多种模型，包括CNN，CNN特征提取+序列模型（LSTM/Transformer），以及Vision Transformer。最终使用模型集成提升效果。
+
+  [[full article](/article/bird_song.html)] [[code](https://github.com/xDarkLemon/BirdRec)]
+
+</ProjectCard>
+
+<ProjectCard image="/projects/09.png">
+
+  **Expressive Power, Generalization, and Optimization of Graph Neural Networks: A Survey**
+
+Summarized the theoretic frameworks of GNN’s expressive power; summarized the generalization bounds,
+the generalization ability of different GNNs, and the methods to improve generalization ability; stated the
+explanation of over-fitting problem and summarized the optimization methods.
+
+  [[full article](/files/GNN_Survey.pdf)]
+
+</ProjectCard>
+
+
 ## Teaching
 
 **Teaching Assistant** for CSC503: Data Mining
+
+Conduct laboratory sessions for a class comprising 30 students, proctor the final exam.
 
 ## Hobbies
 
