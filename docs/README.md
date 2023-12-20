@@ -28,7 +28,7 @@ email: yl6769 (at) nyu (dot) edu
 
 ## About
 
-I am Yibo Liu, a first year Ph.D. student in Computer Science at University of Victoria, supervised by Prof. [Teseo Schneider](http://web.uvic.ca/~teseo/). Currently I am working on geometric processing and physics simulations. Prior to this, I obtained my M.S. in Computer Science from New York University, where I conducted research on multimodal knowledge graph representation learning. I obtained B.Eng. in Electronic Engineering from Beijing University of Posts and Telecommunications. My research interests span on natural language process and computer graphics. My industrial experience includes an internship at Data, Knowledge and Intelligence group at Microsoft Research Asia.
+I am Yibo Liu, a first year Ph.D. student in Computer Science at University of Victoria. Prior to this, I obtained my M.S. in Computer Science from New York University, where I conducted research on multimodal knowledge graph representation learning. I obtained B.Eng. in Electronic Engineering from Beijing University of Posts and Telecommunications. My industrial experience includes an internship at Data, Knowledge and Intelligence group at Microsoft Research Asia.
 
 <!-- ## News
 
