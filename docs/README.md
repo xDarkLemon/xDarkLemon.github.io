@@ -14,13 +14,20 @@ socials:
     icon: "/icons/github.svg"
     link: https://github.com/xDarkLemon
 
+  - title: linkedin
+    icon: "/icons/linkedin.svg"
+    link: https://www.linkedin.com/in/yibo-liu-5a60a21b5/
+    
   - title: twitter
     icon: "/icons/twitter.svg"
     link: https://twitter.com/_liuyibo
 
+  - title: CV
+    icon: "/icons/cv.svg"
+    link: /files/Yibo_Liu_CV_GM.pdf
 
-# cv: https://en.wikipedia.org/wiki/Harry_Potter
-bio: Computer Science
+# cv: /files/Yibo_Liu_CV_GM.pdf
+bio: PhD student in Computer Science
 email: yl6769 (at) nyu (dot) edu
 ---
 
@@ -28,7 +35,7 @@ email: yl6769 (at) nyu (dot) edu
 
 ## About
 
-I am Yibo Liu, a first year Ph.D. student in Computer Science at University of Victoria. Prior to this, I obtained my M.S. in Computer Science from New York University, where I conducted research on multimodal knowledge graph representation learning. I obtained B.Eng. in Electronic Engineering from Beijing University of Posts and Telecommunications. My industrial experience includes an internship at Data, Knowledge and Intelligence group at Microsoft Research Asia.
+I am Yibo Liu, a second year Ph.D. student in Computer Science at University of Victoria, BC, Canada, supervised by [Prof. Dr. Teseo Schneider](http://web.uvic.ca/~teseo/) . Prior to this, I obtained my M.S. in Computer Science from New York University, NY, USA in 2022, and B.Eng. in Electronic Engineering from Beijing University of Posts and Telecommunications, Beijing, China, in 2019. My industrial experience includes an internship at *Data, Knowledge and Intelligence* group at Microsoft Research Asia. My current research interests include computer graphics and physics-inspired machine learning.
 
 <!-- ## News
 
@@ -36,39 +43,37 @@ I am Yibo Liu, a first year Ph.D. student in Computer Science at University of V
 - [July 1980] Born in Godric's Hollow, West Country, England, Great Britain -->
 
 
-## Education
+<!-- ## Education
 
-- **University of Victoria** <br/>
+- **University of Victoria**, BC, Canada <br/> 
 Ph.D. in Computer Science, Sept 2023 - present
+Supervisor: [Teseo Schneider](http://web.uvic.ca/~teseo/)
 
-- **New York University** <br/>
+- **New York University**, NY, USA <br/>
 M.S. in Computer Science, Sept 2019 - Dec 2022
 
-- **University of California, Berkeley** <br/>
-Summer Session, Jul 2016 - Aug 2016
+- **Beijing University of Posts and Telecommunications**, Beijing, China <br/>
+B.Eng. in Electronic Engineering, Sept 2015 - Jun 2019 -->
 
-- **Beijing University of Posts and Telecommunications** <br/>
-B.Eng. in Electronic Engineering, Sept 2015 - Jun 2019
-
-## Internship
-- **Microsoft Research Asia** (full-time, onsite) <br/>
-Intern at Data, Knowledge and Intelligence group, Aug 2020 - Feb 2021
-  - Contributed to the research on Table2Charts.
-  - Delivered Table2Charts technique to Bing search and to Excel spreadsheet intelligence.
+## Industrial Experience
+- **Microsoft Research Asia** | Beijing, China | Aug 2020 - Feb 2021  <br/>
+Intern at *Data, Knowledge and Intelligence* group, full-time, onsite
+  - Conducted the research on Table2Charts, a charts recommendation methods based on excel tables.
+  - Delivered Table2Charts technique to Bing Search and to Excel Spreadsheet Intelligence.
   - Designed multilingual key-phrase extraction algorithm for questionnaire word cloud used in Forms Ideas and in Teams poll.
 
 ## Research Experience
 
-- **Geometric Computing Lab, New York University** <br/>
-Independent project, supervised by [Teseo Schneider](http://web.uvic.ca/~teseo/) and [Daniele Panozzo](https://cims.nyu.edu/gcl/daniele.html), Sept 2022 - Apr 2023 \
+- **Geometric Computing Lab, New York University** | NY, USA | Sept 2022 - Apr 2023 <br/>
+Independent project, supervised by [Prof. Dr. Teseo Schneider](http://web.uvic.ca/~teseo/) and [Prof. Dr. Daniele Panozzo](https://cims.nyu.edu/gcl/daniele.html) \
   Worked on GPU accelerated contact simulations in PolyFEM library.
 
-- **CILVR Lab, New York University** <br/> 
-Independent project, supervised by [Iacer Calixto](http://iacercalixto.github.io) and [Clara Vania](http://claravania.github.io), Mar 2020 - May 2021 \
+- **CILVR Lab, New York University** | NY, USA | Mar 2020 - May 2021 <br/> 
+Independent project, supervised by [Prof. Dr. Iacer Calixto](http://iacercalixto.github.io) and [Dr. Clara Vania](http://claravania.github.io)\
   Worked on learning robust mulilingual multimodal knowledge graph representations.
 
-- **Center for Speech and Language Technologies, Tsinghua University** <br/>
-Research intern, supervised by [Dong Wang](http://wangd.cslt.org), 2019  \
+- **Center for Speech and Language Technologies, Tsinghua University** | Beijing, China | 2018 - 2019<br/>
+Research intern, supervised by [Prof. Dr. Dong Wang](http://wangd.cslt.org)  \
   Worked on ancient Chinese poetry generation.
 
 
@@ -83,7 +88,7 @@ Research intern, supervised by [Dong Wang](http://wangd.cslt.org), 2019  \
   
   Xiang Yue, Yuansheng Ni, Kai Zhang, Tianyu Zheng, Ruoqi Liu, Ge Zhang, Samuel Stevens, Dongfu Jiang, Weiming Ren, Yuxuan Sun, Cong Wei, Botao Yu, Ruibin Yuan, Renliang Sun, Ming Yin, Boyuan Zheng, Zhenzhu Yang, **Yibo Liu**, Wenhao Huang, Huan Sun, Yu Su, Wenhu Chen
 
-  *arXiv* 2311.16502, Nov. 2023
+*Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*, pp. 9556-9567, Jun. 2024
 
   [[Paper](https://arxiv.org/abs/2311.16502)] [[Web Page](https://mmmu-benchmark.github.io)]
 
@@ -109,9 +114,7 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 
 *Proceedings of the 1st Workshop on Multilingual Representation Learning*, pp. 138-152, Nov. 2021. *(colocated with EMNLP 2021)*
 
-  [[Paper](https://aclanthology.org/2021.mrl-1.13.pdf)] [[Slides](/files/MRL_slides.pdf)]
-
-  I was the **speaker** of the presentation.
+  [[Paper](https://aclanthology.org/2021.mrl-1.13.pdf)] 
 
 </ProjectCard>
 
@@ -127,9 +130,36 @@ Houda Alberts, Ningyuan Huang, Yash Deshpande, **Yibo Liu**, Kyunghyun Cho, Clar
 
 </ProjectCard>
 
+
+## Talks
+I presented our paper ["VisualSem: a high-quality knowledge graph for vision and language"](/files/MRL_slides.pdf) at [Workshop on Multilingual Representation Learning](https://www.aclweb.org/portal/content/1st-workshop-multilingual-representation-learning-mrl-emnlp) 2021.
+
+
+## Peer Review Service
+**International Conference on Learning Representations (ICLR)**, 2025
+
+**Transactions on Visualization and Computer Graphics (TVCG)**, 2025
+
+**Transactions on Visualization and Computer Graphics (TVCG)**, 2024
+
+## Volunteer Experience
+**SIGGRAPH Asia 2024** Student Volunteer | Tokyo, Japan | Dec 2024
+
+## Teaching Assistantship
+
+**CSC 503 & SENG 474 Data Mining**, University of Victoria, BC, Canada, 2025 spring
+
+**CSC 503 & SENG 474 Data Mining**, University of Victoria, BC, Canada, 2024 winter
+
+**CSC 116 Introduction to C++**, University of Victoria, BC, Canada, 2024 fall
+
+**SENG 350 Software Architecture**, University of Victoria, BC, Canada, 2024 fall
+
+**CSC 503 & SENG 474 Data Mining**, University of Victoria, BC, Canada, 2023 fall
+
 ## Open-Source Projects
 
-<ProjectCard image="/projects/1.png" >
+<!-- <ProjectCard image="/projects/1.png" >
 
   **Neural Topic Model Library**
   - The first Python library containing all cutting-edge neural topic models.
@@ -139,7 +169,7 @@ LDA library.
 
   [[GitHub | 384 star :star: | 77 fork](https://github.com/zll17/Neural_Topic_Models/tree/dev_b)]
 
-</ProjectCard>
+</ProjectCard> -->
 
 <ProjectCard image="/projects/06.png" >
 
@@ -152,14 +182,14 @@ LDA library.
 
 </ProjectCard>
 
-<ProjectCard image="/projects/07.png" >
+<!-- <ProjectCard image="/projects/07.png" >
 
   **MMMU Benchmark for Expert AGI**
   - Collected college-level multimodal questions and conducted empirical studies on error analysis.
 
   [[Paper](https://dl.acm.org/doi/pdf/10.1145/3447548.3467279)] [[Web Page](https://mmmu-benchmark.github.io)]
 
-</ProjectCard>
+</ProjectCard> -->
 
 <ProjectCard image="/projects/10.png" >
 
@@ -173,9 +203,9 @@ LDA library.
 
 ## Blog Posts
 
-[→ Full list](/article/)
+<!-- [→ Full list](/article/) -->
 
-<ProjectCard image="/projects/08.png">
+<!-- <ProjectCard image="/projects/08.png">
 
   **2021科大讯飞鸟鸣识别比赛总结**
 
@@ -183,7 +213,7 @@ LDA library.
 
   [[full article](/article/bird_song.html)] [[code](https://github.com/xDarkLemon/BirdRec)]
 
-</ProjectCard>
+</ProjectCard> -->
 
 <ProjectCard image="/projects/09.png">
 
@@ -197,18 +227,13 @@ explanation of over-fitting problem and summarized the optimization methods.
 
 </ProjectCard>
 
-
-## Teaching
-
-**Teaching Assistant** for CSC503: Data Mining
-
-Conduct laboratory sessions for a class comprising 30 students, proctor the final exam.
-
 ## Hobbies
 
-**Cycling**: Completed a ride around Qinghai Lake covering a distance of 360 kilometers in 5 days in 2015.
+**Cycling**: Cycled around Qinghai Lake (360 kilometers) in 5 days.
 
-**Snowboarding**: Proficient at an intermediate level.
+**Snowboarding**: Intermediate level.
+
+**Bouldering**: Beginner level.
 
 <!-- ## Awards & Honors
 
