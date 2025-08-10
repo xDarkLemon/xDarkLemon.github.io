@@ -11,7 +11,7 @@ module.exports = {
       { text: "Home", link: "/" },
       // { text: "Blog", link: "/article/" },
       // { text: "About", link: "/about/" },
-      // { text: "Projects", link: "/projects/" },
+      { text: "Projects", link: "/projects/" },
       // { text: "Guide", link: "/guide/" },
       // { text: "GitHub", link: "https://github.com/xDarkLemon" }
     ],

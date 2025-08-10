@@ -6,7 +6,7 @@ xDarkLemon.github.io里面是源码，通过yarn run build命令生成静态页�
 也就是说，以前用hexo的时候，master和source分支都用这个本地的repo。现在用vuepress，源文件vue-source分支使用这个repo的，master分支使用xDarkLemon.github.io-master。因为需要手动copy文件，不好把他们放在同一个本地文件夹的两个分支中。
 
 更改内容：
-1. 修改docs中的内容 （https://vuepress-homepage.netlify.app/guide/customize.html#modification）
+1. 修改docs中的内容 （https://vuepress-homepage.netlify.app/guide/customize.html#modification）(注意图片放在docs下面，而不是dist文件夹中)
 2. yarn dev 本地服务器看 localhost:8080
 3. yarn run build 生成静态文件保存在dist中
 4. 把xDarkLemon.github.io中vue-source的修改推送到远程vue-source分支
