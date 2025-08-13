@@ -84,22 +84,27 @@ Research intern, supervised by [Prof. Dr. Dong Wang](http://wangd.cslt.org)  \
 
 <!-- [→ Full list](/projects/) -->
 
+<ProjectCard image="/projects/duck.png">
+
+  **Neural Kinematic Bases for Fluids**
+  
+  **Yibo Liu**, Paul Kry, Kenny Erleben, Noam Aigerman, Sune Darkner, Zhixin Fang, Teseo Schneider
+  
+  ***SIGGRAPH Asia 2025 Conditionally Accepted***
+
+  [[Paper](https://arxiv.org/abs/2504.15657)] [[Demo](TODO)]
+
+</ProjectCard>
+
 <ProjectCard image="/projects/crowds.png">
 
   **An LLM Agent Based Emotion Model for Crowds Simulation**
+
+  *In Submission*
   
   [[Paper](TODO)] [[Demo](TODO)]
 
 </ProjectCard>
-
-<ProjectCard image="/projects/question.png">
-
-  ***Cool Stuff In Submission***
-  
-  [[Paper](TODO)] [[Demo](TODO)]
-
-</ProjectCard>
-
 
 <ProjectCard image="/projects/01.png" >
 <!-- <ProjectCard image="/projects/01.png" hideBorder=true> -->
