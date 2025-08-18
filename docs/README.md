@@ -90,8 +90,6 @@ Research intern, supervised by [Prof. Dr. Dong Wang](http://wangd.cslt.org)  \
   
   **Yibo Liu**, Paul Kry, Kenny Erleben, Noam Aigerman, Sune Darkner, Zhixin Fang, Teseo Schneider
   
-  ***SIGGRAPH Asia 2025 Conditionally Accepted***
-
   [[Paper](https://arxiv.org/abs/2504.15657)] [[Demo](TODO)]
 
 </ProjectCard>
